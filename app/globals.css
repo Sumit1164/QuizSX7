@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 42 38% 97%;
+    --foreground: 222 36% 12%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 36% 12%;
+    --primary: 176 66% 29%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 38 96% 62%;
+    --secondary-foreground: 222 36% 12%;
+    --muted: 210 24% 92%;
+    --muted-foreground: 217 14% 42%;
+    --accent: 265 58% 56%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 214 20% 84%;
+    --input: 214 20% 84%;
+    --ring: 176 66% 29%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+.quiz-grid {
+  background-image:
+    linear-gradient(rgba(11, 99, 94, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(11, 99, 94, 0.08) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
