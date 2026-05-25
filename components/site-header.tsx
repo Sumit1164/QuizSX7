@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { BookOpenCheck, LogOut, Menu, ShieldCheck, UserRound } from "lucide-react";
+import { BookOpenCheck, LogOut, Menu, UserRound } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useAuth } from "@/components/auth-provider";
 import { logout } from "@/lib/firebase-client";
@@ -30,10 +30,6 @@ export function SiteHeader() {
               {item.label}
             </Link>
           ))}
-          <Link href="/admin" className="inline-flex items-center gap-1 hover:text-foreground">
-            <ShieldCheck className="h-4 w-4" />
-            Admin
-          </Link>
         </nav>
         <div className="flex items-center gap-2">
           {user ? (

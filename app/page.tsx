@@ -1,26 +1,25 @@
 import Link from "next/link";
-import { ArrowRight, Building2, Code2, GraduationCap, LineChart, ShieldCheck, Sparkles } from "lucide-react";
+import { ArrowRight, Building2, GraduationCap, LineChart, ShieldCheck, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { MotionSection } from "@/components/motion-section";
-import { companies, subjects } from "@/lib/seed-data";
+import { companies } from "@/lib/seed-data";
 
 export default function HomePage() {
   return (
     <main>
       <section className="quiz-grid border-b">
-        <div className="container grid min-h-[calc(100vh-4rem)] items-center gap-10 py-12 lg:grid-cols-[1.05fr_0.95fr]">
-          <div className="max-w-3xl">
-            <Badge className="mb-5 border-primary/30 bg-primary/10 text-primary">Built for B-Tech placements</Badge>
-            <h1 className="text-4xl font-black leading-tight tracking-normal sm:text-5xl lg:text-6xl">
+        <div className="container flex min-h-[calc(100vh-4rem)] items-center justify-center py-16 text-center">
+          <div className="mx-auto max-w-3xl">
+            <h1 className="text-5xl font-black leading-tight tracking-normal sm:text-6xl lg:text-7xl">
               QuizSX7
             </h1>
-            <p className="mt-5 max-w-2xl text-lg leading-8 text-muted-foreground">
+            <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-muted-foreground">
               Practice aptitude and programming MCQs for TCS, Google, Amazon, Microsoft, Infosys, Flipkart, and more
               with instant scoring, explanations, and profile progress.
             </p>
-            <div className="mt-8 flex flex-wrap gap-3">
+            <div className="mt-8 flex flex-wrap justify-center gap-3">
               <Button asChild size="lg">
                 <Link href="/practice">
                   Start practice <ArrowRight className="h-4 w-4" />
@@ -29,25 +28,6 @@ export default function HomePage() {
               <Button asChild variant="outline" size="lg">
                 <Link href="/login">Create account</Link>
               </Button>
-            </div>
-          </div>
-          <div className="rounded-lg border bg-card p-4 shadow-soft">
-            <div className="grid gap-3">
-              {subjects.slice(0, 5).map((subject, index) => (
-                <Link
-                  key={subject.slug}
-                  href={`/practice/${subject.slug}`}
-                  className="flex min-h-20 items-center justify-between rounded-md border bg-background p-4 transition hover:border-primary hover:bg-primary/5"
-                >
-                  <div>
-                    <p className="font-black">{subject.title}</p>
-                    <p className="line-clamp-1 text-sm text-muted-foreground">{subject.description}</p>
-                  </div>
-                  <span className="flex h-8 w-8 items-center justify-center rounded-md bg-muted font-black">
-                    {index + 1}
-                  </span>
-                </Link>
-              ))}
             </div>
           </div>
         </div>
