@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { MotionSection } from "@/components/motion-section";
+import { SiteFooter } from "@/components/site-footer";
 import { companies } from "@/lib/seed-data";
 
 export default function HomePage() {
@@ -106,6 +107,7 @@ export default function HomePage() {
           </CardContent>
         </Card>
       </MotionSection>
+      <SiteFooter />
     </main>
   );
 }
